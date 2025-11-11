@@ -1,0 +1,82 @@
+import React, { use } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthContext';
+import img from '../../assets/Top CMS Feature Import Export SUMMARY.png';
+
+const Header = () => {
+    const {user, signOutUser} = use(AuthContext);
+
+    const handleSignOut = () =>{
+        signOutUser()
+        .then(result => console.log(result))
+        .catch(error => console.log(error))
+    }
+        const menuLinks = (
+        <>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/products">All Products</NavLink></li>
+            {
+                user && 
+                <>
+                    <li><NavLink to="import">My Import</NavLink></li>
+                    <li><NavLink to="export">My Export</NavLink></li>
+                </>
+            }
+        </>
+    );
+
+    return (
+        <div className="navbar bg-base-100 shadow-sm">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h8m-8 6h16"
+                            />
+                        </svg>
+                    </label>
+                    <ul
+                        tabIndex={0}
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                    >
+                        {menuLinks}
+                    </ul>
+                </div>
+                <Link to='/'><img src={img} alt="Import Export Logo" className="h-10 w-auto mr-2 rounded-2xl" /></Link>
+                <Link to="/" className="btn btn-ghost text-xl text-[#422ad5] normal-case">
+                    E & I
+                </Link>
+            </div>
+
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    {menuLinks}
+                </ul>
+            </div>
+
+            <div className="navbar-end">
+                {
+                    user?
+                    <Link onClick={handleSignOut} to="/login" className="gradient-btn">
+                    Log Out
+                    </Link>:
+                    <Link to="/login" className="gradient-btn">
+                    Login
+                    </Link>
+                }
+            </div>
+        </div>
+    );
+};
+
+export default Header;
