@@ -14,7 +14,7 @@ const Header = () => {
         const menuLinks = (
         <>
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/products">All Products</NavLink></li>
+            <li><NavLink to="/allProducts">All Products</NavLink></li>
             {
                 user && 
                 <>

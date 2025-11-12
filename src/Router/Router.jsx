@@ -4,11 +4,11 @@ import Hero from "../Component/Hero/Hero";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Registretion/Registretion";
 import ProductsDetails from "../Pages/Products/ProductsDetails";
-import MyExport from "../Pages/MyExports/MyExport";
 import AboutUs from "../Component/AboutUs/AboutUs";
 import MyImport from "../Pages/MyImport/MyImport";
 import LatestProducts from "../Pages/LatestProducts/LatestProducts";
 import AllProducts from "../Pages/AllProducts/AllProducts";
+import MyExport from "../Pages/MyExports/MyExport";
 
 
 const router = createBrowserRouter([
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             element: <LatestProducts />
          },
         {
-            path: "allproducts",
+            path: "allProducts",
             element: <AllProducts/>
          },
         {

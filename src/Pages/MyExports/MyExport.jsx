@@ -1,6 +1,21 @@
 import React from 'react';
 
 const MyExport = () => {
+const handelSubmit = (e) =>{
+    e.preventDefault();
+
+
+    const formData = {
+        productImage: e.target.name.value,
+        productName: e.target.name.value,
+        price: e.target.name.value,
+        originCountry: e.target.value,
+        availableQuantity: e.target.value,
+
+    }
+    console.log(formData)
+}
+
     return (
       <main className="flex justify-center items-center min-h-screen bg-base-200 px-4 py-8">
       <div className="card bg-base-100 w-full max-w-md shadow-xl mx-auto">
@@ -9,7 +24,7 @@ const MyExport = () => {
             My Export
           </h2>
 
-          <form >
+          <form onSubmit={handelSubmit}>
             <fieldset className="space-y-4">
 
               <div>
