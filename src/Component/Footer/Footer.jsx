@@ -42,7 +42,7 @@ const Footer = () => {
                 to="/"
                 className="text-2xl font-bold text-[#422ad5] hover:text-[#5a3ef0] transition"
               >
-                E & I
+                EXPORT EASE
               </Link>
             </div>
             <p className="text-gray-700 leading-relaxed">

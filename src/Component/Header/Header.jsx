@@ -53,9 +53,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to='/'><img src={img} alt="Import Export Logo" className="h-10 w-auto mr-2 rounded-2xl" /></Link>
-                <Link to="/" className="btn btn-ghost text-xl text-[#422ad5] normal-case">
-                    E & I
-                </Link>
+                <a href="/">EXPORT EASE</a>
             </div>
 
             <div className="navbar-center hidden lg:flex">
