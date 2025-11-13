@@ -43,7 +43,7 @@ const Hero = () => {
                 Import Your Products
               </Link>
               <Link
-                to={"/create-products"}
+                to={"/export"}
                 className="btn btn-outline btn-primary px-6">
                 Export Your Products
               </Link>

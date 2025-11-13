@@ -37,8 +37,6 @@ const handelSubmit = (e) =>{
                   name="imageUrl"
                   className="input input-bordered w-full input-sm"
                   placeholder="https://example.com/image.jpg"
-                //   value={form.imageUrl}
-                //   onChange={handleChange}
                   required
                 />
         
@@ -54,8 +52,6 @@ const handelSubmit = (e) =>{
                   name="productName"
                   className="input input-bordered w-full input-sm"
                   placeholder="Enter product name"
-                //   value={form.productName}
-                //   onChange={handleChange}
                   required
                 />
               </div>
@@ -72,8 +68,6 @@ const handelSubmit = (e) =>{
                   step="0.01"
                   className="input input-bordered w-full input-sm"
                   placeholder="0.00"
-                //   value={form.price}
-                //   onChange={handleChange}
                   required
                 />
               </div>
@@ -88,8 +82,6 @@ const handelSubmit = (e) =>{
                   name="originCountry"
                   className="input input-bordered w-full input-sm"
                   placeholder="Origin Country"
-                //   value={form.originCountry}
-                //   onChange={handleChange}
                   required
                 />
               </div>
@@ -104,8 +96,6 @@ const handelSubmit = (e) =>{
                   name="rating"
                   className="input input-bordered w-full input-sm"
                   placeholder="e.g. 4.5/5"
-                //   value={form.rating}
-                //   onChange={handleChange}
                   required
                 />
               </div>
@@ -121,8 +111,6 @@ const handelSubmit = (e) =>{
                   min="0"
                   className="input input-bordered w-full input-sm"
                   placeholder="0"
-                //   value={form.quantity}
-                //   onChange={handleChange}
                   required
                 />
               </div>
@@ -131,7 +119,7 @@ const handelSubmit = (e) =>{
                 type="submit"
                 className="gradient-btn w-full btn-sm mt-2"
               >
-                See Details
+                Add Product
               </button>
             </fieldset>
           </form>

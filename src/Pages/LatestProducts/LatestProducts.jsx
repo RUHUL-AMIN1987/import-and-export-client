@@ -28,7 +28,7 @@ const LatestProducts = () => {
      
     </div>
      <div className="flex justify-center mb-10">
-        <Link to={'/allproducts'} className="btn btn-outline btn-primary px-6">See All Products</Link>
+        <Link to={'/allProducts'} className="btn btn-outline btn-primary px-6">See All Products</Link>
       </div>
     </div>
   );
