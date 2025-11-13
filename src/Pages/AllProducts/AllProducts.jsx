@@ -18,7 +18,7 @@ const AllProducts = () => {
             {products.length === 0 ? (
                 <p className="text-center text-gray-500">Loading products...</p>
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                <div className="max-w-7xl mx-auto px-4 py-10 grid grid-col lg:grid-cols-3 items-center gap-5">
                     {products.map(product => (
                         <div
                             key={product._id}
@@ -35,7 +35,10 @@ const AllProducts = () => {
                             <p className="text-gray-700">
                                 Price: ${product.price_min} - ${product.price_max}
                             </p>
-                            <p>Country:{product.Origin_Country}</p>
+                            <p className="text-gray-700">Country:{product.Origin_Country}</p>
+                            <p className="text-gray-700">Origin Country:{product.Origin_Country}</p>
+                            <p className="text-gray-700">Rating:{product.Origin_Country}</p>
+                            <p className="text-gray-700">Available Quantity:{product.Origin_Country}</p>
                             <Link to={`/products-details/${product._id}`} className="btn btn-outline btn-primary px-6 w-full">View Details </Link>
                         </div>
                     ))}

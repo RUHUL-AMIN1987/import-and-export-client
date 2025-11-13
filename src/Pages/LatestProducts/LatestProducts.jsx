@@ -11,23 +11,33 @@ const LatestProducts = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mt-10 text-center">
-        <h1 className="text-3xl font-bold">Recent <span className="text-primary">Products</span></h1>
-        <div className="max-w-7xl mx-auto px-4 py-10 grid grid-col lg:grid-cols-3 items-center gap-12">
+    <div className="max-w-6xl mx-auto p-6">
+        <h1 className="text-3xl font-bold text-center">Recent <span className="text-primary">Products</span></h1>
+        <div className="max-w-7xl mx-auto px-4 py-10 grid grid-col lg:grid-cols-3 items-center gap-5">
       {products.map(product => (
-        <div key={product._id} className="p-4 shadow rounded-lg bg-base-100">
-            <img className="w-full h-96" src={product.image} alt="" />
-          <h3 className="font-semibold py-4">{product.title}</h3>
-          <div className="flex justify-between mb-5">
-            <p className="text-sm text-gray-600">Min-Price: ${product.price_min}</p>
-            <p className="text-sm text-gray-600">Max-Price: ${product.price_max}</p>
-          </div>
-          <p>Origin Country:${product.Origin_Country}</p>
-          <Link to={`/products-details/${product._id}`} className="btn btn-outline btn-primary px-6 w-full">View Details </Link>
-        </div>
-      ))}
-     
-    </div>
+        <div
+              key={product._id}
+              className="border rounded-xl p-4 shadow hover:shadow-lg transition"
+        >
+              <img
+                src={product.image}
+                alt={product.title}
+                className="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h2 className="text-lg font-semibold mb-2">
+                {product.title}
+              </h2>
+              <p className="text-gray-700">
+                Price: ${product.price_min} - ${product.price_max}
+              </p>
+              <p className="text-gray-700">Country:{product.Origin_Country}</p>
+              <p className="text-gray-700">Origin Country:{product.Origin_Country}</p>
+              <p className="text-gray-700">Rating:{product.Origin_Country}</p>
+              <p className="text-gray-700">Available Quantity:{product.Origin_Country}</p>
+                <Link to={`/products-details/${product._id}`} className="btn btn-outline btn-primary px-6 w-full">View Details </Link>
+            </div>
+          ))}
+      </div>
      <div className="flex justify-center mb-10">
         <Link to={'/allProducts'} className="btn btn-outline btn-primary px-6">See All Products</Link>
       </div>
