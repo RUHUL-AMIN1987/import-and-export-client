@@ -89,8 +89,8 @@ const ProductsDetails = () => {
             {/* Product Info */}
             <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
                 <h1 className="text-2xl font-bold">{product.title}</h1>
-                <p className="text-gray-600">{product.description}</p>
-                <p className="text-lg font-semibold mt-2">Price: ৳{product.price}</p>
+                <p className="text-gray-600">{product.product_image}</p>
+                <p className="text-lg font-semibold mt-2">Price: ${product.price}</p>
             </div>
 
             {/* Bid Button */}
@@ -131,7 +131,7 @@ const ProductsDetails = () => {
                             </div>
 
                             <div>
-                                <label className="label font-medium">Bid Amount (৳)</label>
+                                <label className="label font-medium">Bid Amount ($)</label>
                                 <input
                                     type="number"
                                     name="bit"

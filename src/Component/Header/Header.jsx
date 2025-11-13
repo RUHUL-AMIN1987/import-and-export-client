@@ -20,7 +20,8 @@ const Header = () => {
       {user && (
         <>
           <li><NavLink to="/import">My Import</NavLink></li>
-          <li><NavLink to="/export">My Export</NavLink></li>
+          <li><NavLink to="/">My Export</NavLink></li>
+          <li><NavLink to="/export">Add Product</NavLink></li>
         </>
       )}
     </>
