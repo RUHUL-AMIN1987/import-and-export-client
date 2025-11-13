@@ -22,6 +22,7 @@ const LatestProducts = () => {
             <p className="text-sm text-gray-600">Min-Price: ${product.price_min}</p>
             <p className="text-sm text-gray-600">Max-Price: ${product.price_max}</p>
           </div>
+          <p>Origin Country:${product.Origin_Country}</p>
           <Link to={`/products-details/${product._id}`} className="btn btn-outline btn-primary px-6 w-full">View Details </Link>
         </div>
       ))}
