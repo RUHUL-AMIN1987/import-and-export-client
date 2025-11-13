@@ -96,7 +96,7 @@ const ProductsDetails = () => {
             {/* Bid Button */}
             <div className="text-center mb-8">
                 <button onClick={handleMoralUse} className="gradient-btn px-6 py-3 text-white font-medium rounded-lg">
-                    I want to buy this product
+                    I want to import this product
                 </button>
             </div>
 

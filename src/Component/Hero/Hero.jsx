@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Link to={"/all-products"} className="gradient-btn px-2">
+              <Link to={"/allProducts"} className="gradient-btn px-2">
                 Import Your Products
               </Link>
               <Link

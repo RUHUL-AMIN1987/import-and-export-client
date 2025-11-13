@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
@@ -34,6 +35,7 @@ const AllProducts = () => {
                             <p className="text-gray-700">
                                 Price: ${product.price_min} - ${product.price_max}
                             </p>
+                            <Link to={`/products-details/${product._id}`} className="btn btn-outline btn-primary px-6 w-full">View Details </Link>
                         </div>
                     ))}
                 </div>
