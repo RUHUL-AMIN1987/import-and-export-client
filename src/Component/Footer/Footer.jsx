@@ -42,7 +42,8 @@ const Footer = () => {
                 to="/"
                 className="text-2xl font-bold text-[#422ad5] hover:text-[#5a3ef0] transition"
               >
-                EXPORT EASE
+                <span className="text-primary">EXPORT </span>
+                <span className="text-gray-800">EASE</span>
               </Link>
             </div>
             <p className="text-gray-700 leading-relaxed">

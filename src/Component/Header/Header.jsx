@@ -61,7 +61,13 @@ const Header = () => {
             className="h-10 w-auto mr-2 rounded-2xl"
           />
         </Link>
-        <a href="/" className="font-bold text-lg">EXPORT EASE</a>
+        <a
+        href="/"
+        className="inline-flex items-center gap-2 font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl transition-all duration-300 hover:text-primary focus:text-primary"
+        >
+        <span className="text-primary">EXPORT</span>
+        <span className="text-gray-800">EASE</span>
+        </a>
       </div>
 
       <div className="navbar-center hidden lg:flex">
