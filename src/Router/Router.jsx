@@ -9,6 +9,7 @@ import MyImport from "../Pages/MyImport/MyImport";
 import LatestProducts from "../Pages/LatestProducts/LatestProducts";
 import AllProducts from "../Pages/AllProducts/AllProducts";
 import MyExport from "../Pages/MyExports/MyExport";
+import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         },
         {
            path: "products-details/:id",
-           loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`),
+           loader: ({params}) => fetch(`https://smart-deals-app.vercel.app/products/${params.id}`),
            Component: ProductsDetails,
         },
         {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
          },
         {
             path: "allProducts",
-            element: <AllProducts/>
+            element:<PrivateRoute><AllProducts></AllProducts></PrivateRoute>
          },
         {
            path: "login",
@@ -43,15 +44,15 @@ const router = createBrowserRouter([
         },
         {
            path: "about",
-           element: <AboutUs></AboutUs>,
+           element: <PrivateRoute><AboutUs></AboutUs></PrivateRoute>,
         },
         {
          path: "export",
-         element:<MyExport></MyExport>,
+         element:<PrivateRoute><MyExport></MyExport></PrivateRoute>,
         },
         {
          path: "import",
-         element:<MyImport></MyImport>,
+         element:<PrivateRoute><MyImport></MyImport></PrivateRoute>,
         }
     ]
   },

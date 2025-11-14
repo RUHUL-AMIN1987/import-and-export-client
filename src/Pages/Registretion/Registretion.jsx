@@ -18,7 +18,7 @@ const Register = () => {
        
     //Create user data in database
 
-    fetch('http://localhost:3000/users' ,{
+    fetch('https://smart-deals-app.vercel.app/users' ,{
        method: "POST",
        headers: {
         'content-type':'application/json'

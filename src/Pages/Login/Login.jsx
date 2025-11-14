@@ -1,17 +1,18 @@
 
 import React, { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import Swal from "sweetalert2";
 
 const Login = () => {
   const { googleSignIn, signInUser } = useContext(AuthContext);
-
+  const navigate = useNavigate();
   // 🔹 Google Sign-In Handler
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
+         navigate('/')
         Swal.fire({
           title: "Login Successful!",
           text: `Welcome, ${result.user.displayName || result.user.email}`,
@@ -37,6 +38,7 @@ const Login = () => {
 
     signInUser(email, password)
       .then((result) => {
+        navigate('/')
         Swal.fire({
           title: "Login Successful!",
           text: `Welcome back, ${result.user.email}`,

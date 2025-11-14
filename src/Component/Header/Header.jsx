@@ -17,13 +17,10 @@ const Header = () => {
     <>
       <li><NavLink to="/">Home</NavLink></li>
       <li><NavLink to="/allProducts">All Products</NavLink></li>
-      {user && (
-        <>
-          <li><NavLink to="/import">My Import</NavLink></li>
-          <li><NavLink to="/">My Export</NavLink></li>
-          <li><NavLink to="/export">Add Product</NavLink></li>
-        </>
-      )}
+      <li><NavLink to="/import">My Import</NavLink></li>
+      <li><NavLink to="/">My Export</NavLink></li>
+      <li><NavLink to="/export">Add Product</NavLink></li>
+       
     </>
   );
 

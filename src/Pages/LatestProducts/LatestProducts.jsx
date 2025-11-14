@@ -5,7 +5,7 @@ const LatestProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/latest-products")
+    fetch("https://smart-deals-app.vercel.app/latest-products")
       .then(res => res.json())
       .then(data => setProducts(data));
   }, []);
@@ -16,7 +16,7 @@ const LatestProducts = () => {
         Recent <span className="text-primary">Products</span>
       </h1>
 
-      <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto px-4 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product, index) => (
           <div
             key={index}
@@ -31,7 +31,7 @@ const LatestProducts = () => {
               }}
             />
 
-            <h2 className="text-lg font-semibold mb-2">
+            <h2 className="text-lg font-semibold text-primary mb-2">
               {product.product_name}
             </h2>
 

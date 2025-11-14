@@ -6,7 +6,7 @@ const AllProducts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://smart-deals-app.vercel.app/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -50,7 +50,7 @@ const AllProducts = () => {
                     "https://i.ibb.co/6Nf3ySm/default-user.png";
                 }}
               />
-              <h2 className="text-lg font-semibold mb-2 line-clamp-1">
+              <h2 className="text-lg text-primary font-semibold mb-2 line-clamp-1">
                 {product.product_name}
               </h2>
               <p className="text-gray-700 font-medium">
@@ -74,7 +74,7 @@ const AllProducts = () => {
                   : "Out of stock"}
               </p>
               <Link
-                to={"/products-details"}
+                to={"/products-details/:id"}
                 className="btn btn-outline btn-primary w-full mt-3"
               >
                 View Details
